@@ -1,5 +1,34 @@
 # Codex Usage Menu
 
+## 🇰🇷 한국어 안내
+
+Codex Usage Menu는 macOS 상단 메뉴바에서 Codex 사용량을 바로 확인할 수 있는 작은 유틸리티입니다.
+
+- 5시간 사용 한도 잔여량 표시
+- 주간 사용 한도 잔여량 표시
+- 각 한도의 초기화 시간 확인
+- 60초마다 자동 새로고침
+- Mac 로그인 시 자동 실행
+- 기존 Codex CLI 로그인 사용
+- OpenAI API Key 불필요
+
+### 설치
+
+Codex CLI가 설치되어 있고 ChatGPT 계정으로 로그인된 상태에서 아래 명령어를 실행하세요.
+
+    curl -fsSL https://raw.githubusercontent.com/borarim-design/codex-usage-menu/main/install.sh | bash
+
+### 알려진 현상
+
+앱 실행 직후 로컬 Codex app server가 준비되는 데 시간이 걸리면 메뉴바에 사용량 대신 `⚠︎` 아이콘만 잠시 표시될 수 있습니다.
+
+대부분 다음 자동 새로고침에서 정상적으로 사용량이 나타나며, 최대 약 60초 정도 걸릴 수 있습니다. 메뉴에서 `Refresh now`를 눌러 직접 다시 조회할 수도 있습니다.
+
+> 이 프로젝트는 비공식 커뮤니티 프로젝트이며 OpenAI의 공식 제품이 아닙니다.
+
+---
+
+
 A tiny macOS menu bar utility for checking your Codex usage without opening the Usage dashboard.
 
 `◉ 5h 25% · W 64%`
