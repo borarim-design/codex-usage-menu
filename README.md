@@ -61,6 +61,16 @@ Because this relies on the local Codex app-server interface, future Codex CLI up
 
 All usage checks happen locally through your existing Codex CLI login.
 
+## Known issue
+
+On some launches, the initial Codex usage request may time out while the local Codex app server is starting.
+
+When this happens, the menu bar may temporarily show only a `⚠︎` icon instead of the usage percentages.
+
+In most cases, the usage values appear automatically on the next refresh (within about 60 seconds).
+
+You can also click **Refresh now** from the menu bar.
+
 ## Disclaimer
 
 This is an unofficial community project. It is not affiliated with, endorsed by, or sponsored by OpenAI.
