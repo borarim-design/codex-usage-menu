@@ -237,9 +237,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM d, HH:mm"
 
-        return "↻ Resets \(formatter.string(
-            from: Date(timeIntervalSince1970: timestamp)
-        ))"
+        let resetDate = Date(timeIntervalSince1970: timestamp)
+        return "↻ Resets \(formatter.string(from: resetDate))"
     }
 
     @objc func openUsage() {
