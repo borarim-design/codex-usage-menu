@@ -77,6 +77,15 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
         let menu = NSMenu()
 
+        // Keep informational rows visually active instead of greyed out.
+        menu.autoenablesItems = false
+
+        fiveItem.isEnabled = true
+        fiveResetItem.isEnabled = true
+        weekItem.isEnabled = true
+        weekResetItem.isEnabled = true
+        updatedItem.isEnabled = true
+
         menu.addItem(fiveItem)
         menu.addItem(fiveResetItem)
 
@@ -193,21 +202,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let weekText =
             week.map { "\($0)%" } ?? "--"
 
-        let lowest =
-            min(five ?? 100, week ?? 100)
-
-        let warning: String
-
-        if lowest <= 10 {
-            warning = "🔴 "
-        } else if lowest <= 20 {
-            warning = "⚠︎ "
-        } else {
-            warning = ""
-        }
-
         statusItem.button?.title =
-            " \(warning)5h \(fiveText) · W \(weekText)"
+            " 5h \(fiveText) · W \(weekText)"
 
         fiveItem.title =
             "5-hour limit    \(fiveText) remaining"

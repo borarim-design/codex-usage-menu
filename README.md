@@ -39,8 +39,6 @@ A tiny macOS menu bar utility for checking your Codex usage without opening the 
 - Weekly usage remaining
 - Reset times
 - Refreshes every 60 seconds
-- Warning at 20% remaining
-- Strong warning at 10% remaining
 - Starts automatically when you log in
 - Uses your existing Codex CLI login
 - No API key required
